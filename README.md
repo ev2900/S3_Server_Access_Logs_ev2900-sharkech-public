@@ -8,6 +8,6 @@ To better understand the usage of the repositories I create, I can look at the n
 
 The repository has 2 python scripts. [aggregate_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/aggregate_server_access_logs.py) and [analyze_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/analyze_server_access_logs.py)
 
-[aggregate_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/aggregate_server_access_logs.py) aggregates the many small files that store S3 server access logs into a single large file. This is not 100% necessary but it keep the S3 bucket that holds the logs neat.
+[aggregate_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/aggregate_server_access_logs.py) aggregates the many small files that store S3 server access logs into a single large file. This is not 100% necessary but it keeps the S3 bucket that holds the logs neat.
 
-[analyze_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/analyze_server_access_logs.py) uses a regular expression to find the instances of ```REST.GET.OBJECT``` for specific YAML files
+[analyze_server_access_logs.py](https://github.com/ev2900/S3_Server_Access_Logs_ev2900-sharkech-public/blob/main/analyze_server_access_logs.py) uses a regular expression to find the instances of ```REST.GET.OBJECT``` for specific YAML files and count how many times a get object request(s) were made.
