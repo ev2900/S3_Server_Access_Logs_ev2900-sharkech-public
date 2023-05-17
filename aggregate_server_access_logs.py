@@ -5,6 +5,8 @@ from boto3.session import Session
 
 from datetime import datetime
 
+from os import walk
+
 #
 # Download server access logs
 #
@@ -53,17 +55,30 @@ for s3_object in my_bucket.objects.all():
 # Aggregate the many server access logs into a single large file
 #
 
-'''
-# For debugging purposes only if you don't want to get all the files again via. S3 API ....
-from os import walk
-
-server_access_logs = next(walk('Raw_Server_Access_Logs/'), (None, None, []))[2]
-'''
-
 print('Aggregating server access logs ...')
 
+# Create folder Aggregated_Server_Access_Logs/ if it doesn't exist
+isExist = os.path.exists('Aggregated_Server_Access_Logs/')
+
+if not isExist:
+    os.makedirs('Aggregated_Server_Access_Logs/')
+
+    print('Created Aggregated_Server_Access_Logs/')
+
+# If the folder Aggregated_Server_Access_Logs/ delete the files in it
+if isExist:
+
+    aggregated_server_access_logs = next(walk('Aggregated_Server_Access_Logs/'), (None, None, []))[2]
+    
+    for aggregated_access_log in aggregated_server_access_logs:
+
+        os.remove('Aggregated_Server_Access_Logs/' + aggregated_access_log)
+
+    print('Deleted files in Aggregated_Server_Access_Logs/')
+
+
 # Aggregate the server access logs
-agg_server_access_logs_file = open(datetime.today().strftime('%Y-%m-%d'), 'w')
+agg_server_access_logs_file = open('Aggregated_Server_Access_Logs/' + datetime.today().strftime('%Y-%m-%d'), 'w')
 
 for access_log in server_access_logs:
     
@@ -110,5 +125,4 @@ for server_access_log_s3_key in server_access_logs_s3_keys:
 
 print('Upload aggregated S3 server access log file ...')
 
-s3.Bucket('sharkech-logging-bucket').upload_file(datetime.today().strftime('%Y-%m-%d'), 'sharkech-public/' + datetime.today().strftime('%Y-%m-%d'))
-
+s3.Bucket('sharkech-logging-bucket').upload_file('Aggregated_Server_Access_Logs/' + datetime.today().strftime('%Y-%m-%d'), 'sharkech-public/' + datetime.today().strftime('%Y-%m-%d'))
