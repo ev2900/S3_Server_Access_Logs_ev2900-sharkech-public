@@ -2,9 +2,7 @@ import boto3
 import os
 
 from boto3.session import Session
-
 from datetime import datetime
-
 from os import walk
 
 #
