@@ -22,6 +22,7 @@ for line in server_access_log_agg_results:
 
 # Git pull on the OpenSearch_CloudWatch_Alarms repo
 os.system("git -C C:\\Users\\sharkech\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms pull")
+print("Git pull on OpenSearch_CloudWatch_Alarms")
 
 # Open the README for OpenSearch_CloudWatch_Alarms
 with open("C:/Users/sharkech/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md") as README_file:
@@ -32,10 +33,10 @@ new_README_lines = []
 
 for line in README_lines:
 
-	regex = r'<img width="100" alt="map-user" src="https://img.shields.io/badge/downloads-.*'
+	regex = r'<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-.*-blue">'
 
 	if re.match(regex, line):
-		new_README_lines.append('<img width="100" alt="map-user" src="https://img.shields.io/badge/downloads-' + str(openSearch_cloudWatch_alarms_downloads) + '-blue">')
+		new_README_lines.append('<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-' + str(openSearch_cloudWatch_alarms_downloads) + '-blue">')
 	else:
 		new_README_lines.append(line)
 
