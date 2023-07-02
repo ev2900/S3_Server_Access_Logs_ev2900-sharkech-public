@@ -21,11 +21,11 @@ for line in server_access_log_agg_results:
 		openSearch_cloudWatch_alarms_downloads = split_line[1]
 
 # Git pull on the OpenSearch_CloudWatch_Alarms repo
-os.system("git -C C:\\Users\\sharkech\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms pull")
+os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms\\README.md")
 print("Git pull on OpenSearch_CloudWatch_Alarms")
 
 # Open the README for OpenSearch_CloudWatch_Alarms
-with open("C:/Users/sharkech/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md") as README_file:
+with open("C:/Users/ev290/OneDrive/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md") as README_file:
 	README_lines = [line.rstrip() for line in README_file]
 README_file.close()
 
@@ -40,13 +40,13 @@ for line in README_lines:
 	else:
 		new_README_lines.append(line)
 
-new_README_file = open("C:/Users/sharkech/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md", "w")
+new_README_file = open("C:/Users/ev290/OneDrive/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md", "w")
 
 for line in new_README_lines:
 	new_README_file.write(line + "\n")
 
 new_README_file.close()
 
-os.system("git -C C:\\Users\\sharkech\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms add .")
-os.system('git -C C:\\Users\\sharkech\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms commit -m "Updating downloads"')
-os.system("git -C C:\\Users\\sharkech\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms push")
+os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms add .")
+os.system('git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms commit -m "Updating downloads"')
+os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms push")
