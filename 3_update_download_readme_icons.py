@@ -21,11 +21,11 @@ for line in server_access_log_agg_results:
 		openSearch_cloudWatch_alarms_downloads = split_line[1]
 
 # Git pull on the OpenSearch_CloudWatch_Alarms repo
-os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms\\README.md")
+os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms pull")
 print("Git pull on OpenSearch_CloudWatch_Alarms")
 
 # Open the README for OpenSearch_CloudWatch_Alarms
-with open("C:/Users/ev290/OneDrive/Desktop/GitHub/OpenSearch_CloudWatch_Alarms/README.md") as README_file:
+with open("C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms\\README.md") as README_file:
 	README_lines = [line.rstrip() for line in README_file]
 README_file.close()
 
