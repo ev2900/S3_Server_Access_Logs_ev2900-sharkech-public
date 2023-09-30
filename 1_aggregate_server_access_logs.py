@@ -6,6 +6,12 @@ from datetime import datetime
 from os import walk
 
 #
+# Configure the following variable before running the script
+#
+
+s3_bucket_name_that_has_your_sever_access_logs_in_it = 'sharkech-logging-bucket'
+
+#
 # Download server access logs
 #
 
@@ -35,7 +41,7 @@ session = Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY
 s3 = session.resource('s3')
 
 # List and download all file in the sharkech-logging-bucket bucket
-my_bucket = s3.Bucket('sharkech-logging-bucket')
+my_bucket = s3.Bucket(s3_bucket_name_that_has_your_sever_access_logs_in_it)
 
 server_access_logs = []
 server_access_logs_s3_keys = []
@@ -115,7 +121,7 @@ print('Delete unaggregated S3 server access logs ...')
 
 for server_access_log_s3_key in server_access_logs_s3_keys:
 
-    s3.Object('sharkech-logging-bucket', server_access_log_s3_key).delete()
+    s3.Object(s3_bucket_name_that_has_your_sever_access_logs_in_it, server_access_log_s3_key).delete()
 
 #
 # Uploaded aggregated server access logs from S3
@@ -123,4 +129,4 @@ for server_access_log_s3_key in server_access_logs_s3_keys:
 
 print('Upload aggregated S3 server access log file ...')
 
-s3.Bucket('sharkech-logging-bucket').upload_file('Aggregated_Server_Access_Logs/' + datetime.today().strftime('%Y-%m-%d'), 'sharkech-public/' + datetime.today().strftime('%Y-%m-%d'))
+s3.Bucket(s3_bucket_name_that_has_your_sever_access_logs_in_it).upload_file('Aggregated_Server_Access_Logs/' + datetime.today().strftime('%Y-%m-%d'), 'sharkech-public/' + datetime.today().strftime('%Y-%m-%d'))

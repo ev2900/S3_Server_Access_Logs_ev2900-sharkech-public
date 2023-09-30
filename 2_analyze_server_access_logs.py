@@ -5,6 +5,12 @@ import re
 from boto3.session import Session
 from datetime import datetime
 
+#
+# Configure the following variable before running the script
+#
+
+s3_bucket_name_that_has_your_yaml_files_in_it = 'sharkech-public' # NOT the s3 bucket name that has your sever access logs in it
+
 # Get credentials from aws_credentials.txt file
 aws_credentials_file = open('aws_credentials.txt', 'r')
 
