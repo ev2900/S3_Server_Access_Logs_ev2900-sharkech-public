@@ -21,8 +21,10 @@ for line in server_access_log_agg_results:
 		openSearch_cloudWatch_alarms_downloads = split_line[1]
 
 # Git pull on the OpenSearch_CloudWatch_Alarms repo
+print("Git pull on OpenSearch_CloudWatch_Alarms:")
+print("-")
+
 os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms pull")
-print("Git pull on OpenSearch_CloudWatch_Alarms")
 
 # Open the README for OpenSearch_CloudWatch_Alarms
 with open("C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms\\README.md") as README_file:
@@ -50,3 +52,6 @@ new_README_file.close()
 os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms add .")
 os.system('git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms commit -m "Updating downloads"')
 os.system("git -C C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\OpenSearch_CloudWatch_Alarms push")
+
+print("-")
+print("Number of OpenSearch CloudWatch alarm downloads = " + str(openSearch_cloudWatch_alarms_downloads))
