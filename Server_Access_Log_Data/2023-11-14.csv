@@ -5,7 +5,7 @@ misc-public/GlueImmersionDay.yaml,255
 misc-public/Glue_Job_Deployment_Create_Small_Parquet_Files.yaml,5
 misc-public/KDA_studio_kinesis_demo.yaml,0
 misc-public/OpenSearch_Neural_Search.yaml,12
-misc-public/OpenSearch_cloudwatch_alarms.yaml,250
+misc-public/OpenSearch_cloudwatch_alarms.yaml,281
 misc-public/OpenSearch_cross_cluster_replication_demo.yaml,3
 misc-public/OpenSearch_demo.yaml,8
 misc-public/OpenSearch_demo_Cloud9_simple.yaml,0
@@ -26,5 +26,5 @@ misc-public/msk_lambda_opensearch.yaml,75
 misc-public/opensearch-dashboard-no-ssl-ecs-fargate.yaml,17
 misc-public/opensearch_Sigv4.yaml,2
 misc-public/opensearch_deleteddocuments.yaml,0
-misc-public/opensearch_nginx.yaml,72
+misc-public/opensearch_nginx.yaml,76
 misc-public/opensearchpy_Sigv4.yaml,0
