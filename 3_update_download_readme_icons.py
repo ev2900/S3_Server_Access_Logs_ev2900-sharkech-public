@@ -96,3 +96,11 @@ update_cloudformation_template_deployments_in_readme("C:\\Users\\ev290\\OneDrive
 glue_aggregate_small_files_downloads = get_number_of_deployments("Aggregate_Small_Parquet_File_Glue_Job_Deployment.yaml")
 
 update_cloudformation_template_deployments_in_readme("C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\Glue_Aggregate_Small_Files", glue_aggregate_small_files_downloads)
+
+#
+# DataZone_Demo 
+#
+
+dataZone_demo_downloads = get_number_of_deployments("0_datazone_cloudformation.yaml")
+
+update_cloudformation_template_deployments_in_readme("C:\\Users\\ev290\\OneDrive\\Desktop\\GitHub\\DataZone_Demo", dataZone_demo_downloads)
