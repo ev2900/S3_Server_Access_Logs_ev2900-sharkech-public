@@ -1,12 +1,12 @@
 Filename,Number of Object Get Resquests
-misc-public/0_datazone_cloudformation.yaml,14
+misc-public/0_datazone_cloudformation.yaml,22
 misc-public/Aggregate_Small_Parquet_File_Glue_Job_Deployment.yaml,19
 misc-public/AmazonSecurityLakeMetaStoreManager_IAM_Role.yaml,0
 misc-public/GlueImmersionDay.yaml,255
 misc-public/Glue_Job_Deployment_Create_Small_Parquet_Files.yaml,5
 misc-public/KDA_studio_kinesis_demo.yaml,0
 misc-public/OpenSearch_Neural_Search.yaml,12
-misc-public/OpenSearch_cloudwatch_alarms.yaml,288
+misc-public/OpenSearch_cloudwatch_alarms.yaml,294
 misc-public/OpenSearch_cross_cluster_replication_demo.yaml,3
 misc-public/OpenSearch_demo.yaml,8
 misc-public/OpenSearch_demo_Cloud9_simple.yaml,0
@@ -24,8 +24,8 @@ misc-public/msk_cluster.yaml,0
 misc-public/msk_cluster_Plaintext.yaml,0
 misc-public/msk_cluster_TLS.yaml,0
 misc-public/msk_lambda_opensearch.yaml,75
-misc-public/opensearch-dashboard-no-ssl-ecs-fargate.yaml,17
+misc-public/opensearch-dashboard-no-ssl-ecs-fargate.yaml,20
 misc-public/opensearch_Sigv4.yaml,2
 misc-public/opensearch_deleteddocuments.yaml,0
-misc-public/opensearch_nginx.yaml,76
+misc-public/opensearch_nginx.yaml,79
 misc-public/opensearchpy_Sigv4.yaml,0
