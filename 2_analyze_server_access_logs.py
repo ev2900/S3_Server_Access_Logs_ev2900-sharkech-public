@@ -61,3 +61,11 @@ for cloudformation_file_name in cloudformation_file_names:
 	output_results_file.write(cloudformation_file_name + "," + str(downloads) + "\n")
 
 output_results_file.close()
+
+# Delete old analyized service access log data
+for filename in os.listdir('Server_Access_Log_Data/'):
+
+	if filename == datetime.today().strftime('%Y-%m-%d') + ".csv":
+		next
+	else:
+		os.remove('Server_Access_Log_Data/' + filename)
